@@ -5,7 +5,7 @@ import random
 
 # Establishing connection with the MySQL database
 mydb = pymysql.connect(host="localhost", user="root", password="", database="hotel_management_system")
-mycursor = mydb.cursor()
+mycursor = mydb.cursor() # cursor: Allow python code to execute postgreSQL command in a database session
 
 # Function to handle the check-in process
 def checkin():
@@ -51,7 +51,7 @@ def checkin():
     C1.pack()
 
     # Name entry
-    name = Label(root, text="ENTER YOUR NAME", font=('Copperplate', 15, 'bold'))
+    name = Label(root, text="ENTER YOUR NAME", font=('Copperplate', 15, 'bold')) #label:it used texboxes
     name.place(x=50, y=123)
     m_name = Label(root, text=":", font=('Copperplate', 15, 'bold'))
     m_name.place(x=320, y=123)
@@ -101,10 +101,10 @@ def checkin():
             address = e_address.get()
             m_number = e_number.get()
             days = int(e_days.get())
-            deluxe_r = ""
-            general_r = ""
-            fulld_r = ""
-            joint_r = ""
+            deluxe_room = ""
+            general_room = ""
+            fulld_room = ""
+            joint_room = ""
             if d_var.get() == 1:
                 deluxe_r = "Deluxe"
             if g_var.get() == 1:
@@ -197,10 +197,10 @@ def checkin():
 
     # Function to handle Full Deluxe room selection
     def fulld_select():
-        if fd_var.get() == 1:
-            d_var.set(0)
-            g_var.set(0)
-            j_var.set(0)
+        if fulldelux_var.get() == 1:
+            delux_var.set(0)
+            general_var.set(0)
+            joint_var.set(0)
 
     # Function to handle Joint room selection
     def joint_select():
