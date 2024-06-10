@@ -9,7 +9,7 @@ def get_info_of_any_guest():
     root = Tk()
     root.geometry("1000x550")
     root.title("HOTEL MANAGEMENT SYSTEM")
-    root.resizable(False, False)
+    root.resizable(False, False)#resizable:one type of methods It's used to allow tkinter rrot window to change its size according to the users
 
     # Frame to contain the title
     frame1 = Frame(root, padx=85, pady=10, highlightbackground="black", highlightthickness=1)
