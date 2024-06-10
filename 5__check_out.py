@@ -7,7 +7,7 @@ mycursor = mydb.cursor()
 
 def checkout():
     root = Tk()
-    root.geometry("1000x550")
+    root.geometry("1000x550")  #multiple value represents the multiple of all value in the dataset.
     root.title("HOTEL MANAGEMENT SYSTEM")
     root.resizable(False, False)
 
